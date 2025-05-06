@@ -1,4 +1,20 @@
 #!/bin/bash
-curl -LO https://github.com/dflib/jjava/releases/download/1.0-a4/jjava-1.0-a4-kernelspec.zip 
-unzip jjava-1.0-a4-kernelspec.zip 
+set -euxo pipefail
+
+# Ensure unzip and curl are available via apt.txt
+
+# Download kernel ZIP (with fail on error)
+curl -fLO https://github.com/dflib/jjava/releases/download/1.0-a4/jjava-1.0-a4-kernelspec.zip
+
+# Verify download
+ls -lh jjava-1.0-a4-kernelspec.zip
+
+# Unzip and verify output
+unzip jjava-1.0-a4-kernelspec.zip
+ls -al
+
+# Optional sleep for debugging
+sleep 2
+
+# Install the kernel (no --user)
 jupyter kernelspec install jjava-1.0-a4-kernelspec --name=java
