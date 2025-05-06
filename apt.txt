@@ -1,5 +1,0 @@
-openjdk-17-jre-headless
-ca-certificates-java
-curl
-unzip
-python3
