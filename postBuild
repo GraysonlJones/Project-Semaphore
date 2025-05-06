@@ -2,6 +2,6 @@
 set -e
 
 # Install jjava kernel
-git clone https://github.com/Bachmann1234/jjava.git
+git clone https://github.com/dflib/jjava.git
 cd jjava
 ./install.sh --user
