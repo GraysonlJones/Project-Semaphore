@@ -1,7 +1,4 @@
 #!/bin/bash
-set -e
-
-# Install jjava kernel
-git clone https://github.com/dflib/jjava.git
-cd jjava
-./install.sh --user
+curl -LO https://github.com/dflib/jjava/releases/download/v1.3.0/jjava-1.3.0-kernelspec.zip
+unzip jjava-1.3.0-kernelspec.zip
+jupyter kernelspec install jjava-1.3.0-kernelspec --user --name=java
